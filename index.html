@@ -235,6 +235,22 @@ a {
     .projeto-card:hover img {
   transform: scale(1.03);
 }
+    .descricao {
+  font-size: 14px;
+  color: #666;
+}
+
+.texto-completo {
+  display: none;
+}
+
+.toggle-text {
+  display: block;
+  margin-top: 8px;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
 
   </style>
 </head>
@@ -323,11 +339,21 @@ a {
       <img src="images/barbearia.png" alt="Projeto Barbearia">
 
     <h3>💈 Sistema de Fila para Barbearia</h3>
-    <p>
-      Aplicação fullstack em tempo real desenvolvida com Node.js, Express, MongoDB e JavaScript.
-O sistema permite que clientes acompanhem remotamente a fila do barbeiro, visualizando posição e tempo estimado diretamente de casa.
-O barbeiro possui controle total da fila por meio de um painel administrativo, podendo adicionar, remover, reorganizar e finalizar atendimentos de forma dinâmica.
-    </p>
+    <p class="descricao">
+  <span class="texto-curto">
+    Aplicação fullstack em tempo real...
+  </span>
+
+  <span class="texto-completo">
+    Aplicação fullstack em tempo real utilizando Node.js, Express e MongoDB.
+    Permite que clientes acompanhem remotamente a fila da barbearia, visualizando posição, tempo estimado e andamento do atendimento.
+    O barbeiro possui controle total da fila, podendo adicionar, remover, reorganizar e finalizar atendimentos.
+  </span>
+
+  <span class="toggle-text" onclick="toggleTexto(this)">
+    Ver mais
+  </span>
+</p>
     <a href="https://fila-barbearia-r6ci.onrender.com/" target="_blank">Ver projeto</a>
   </div>
 
@@ -386,6 +412,8 @@ O barbeiro possui controle total da fila por meio de um painel administrativo, p
     }
 
     document.addEventListener("DOMContentLoaded", type);
+
+    
   </script>
 
 </body>
